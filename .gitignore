@@ -10,3 +10,4 @@ wheels/
 .venv
 
 inputs/day-*/*.txt
+inputs/day-*/*.parquet
