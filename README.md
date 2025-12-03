@@ -28,4 +28,4 @@ SELECT * FROM 'inputs/day-1/input.parquet';
 
 - Python ≥3.13
 - pyarrow ≥22.0.0
-- DuckDB CLI >=1.3.0
+- DuckDB CLI ≥1.3.0
