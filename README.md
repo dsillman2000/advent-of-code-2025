@@ -2,30 +2,30 @@
 
 This repository contains my solutions to [Advent of Code 2025](https://adventofcode.com/2025) using DuckDB SQL.
 
-Each day's input file is converted from text to Parquet format using a small Python script (`main.py`), then queried with DuckDB to solve the puzzles.
+Each day's input file is converted from text to Parquet format using a small Python script (`to_parquet.py`), then queried with DuckDB to solve the puzzles.
 
 ## Usage
 
-To convert a text input file to Parquet:
+To convert any .txt files in the `inputs/` directory to Parquet format, run:
 
 ```bash
-python main.py input.txt output.parquet
+sh scripts/parquetify.sh
 ```
 
-Then use DuckDB to query the Parquet file:
+Then use DuckDB to query a given Parquet file:
 
 ```sql
-SELECT * FROM 'output.parquet';
+SELECT * FROM 'inputs/day-1/input.parquet';
 ```
 
 ## Structure
 
-- `main.py` – Python script for text-to-Parquet conversion
-- Daily solution SQL files (to be added)
-- Input files (not committed)
+- `to_parquet.py` – Python script for text-to-Parquet conversion
+- `solutions/day-*/part-*.sql` – Daily solution SQL files
+- `inputs/` - Input files (not committed)
 
 ## Requirements
 
 - Python ≥3.13
 - pyarrow ≥22.0.0
-- DuckDB
+- DuckDB CLI >=1.3.0
