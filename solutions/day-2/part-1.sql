@@ -25,6 +25,6 @@ ids_bisected as (
     from expanded_ranges
 )
 
-select sum(id)
+select sum(id) as solution
 from ids_bisected
 where first_half = second_half;

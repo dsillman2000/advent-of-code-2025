@@ -43,5 +43,5 @@ pre_solution as (
     where repeat(kernel_str, est_repetitions) = id_str
 )
 
-select sum(solution_id)
+select sum(solution_id) as solution
 from pre_solution;
